@@ -21,7 +21,7 @@ public class JobConfig {
     @Bean
     public Job imprimeOlaJob(Step imprimeOlaStep, Step imprimeParImparStep) {
         return jobBuilderFactory
-                .get("imprimeOlaJob")
+                .get("cursoSpringBatchJob")
                 .start(imprimeOlaStep)
                 .next(imprimeParImparStep)
                 .incrementer(new RunIdIncrementer())
